@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:healthcare/Signin/signinOption.dart';
+import 'package:healthcare/SingUpForm/SignupForm.dart';
 
 class Signup extends StatefulWidget {
   @override
@@ -81,12 +82,12 @@ class _SignupState extends State<Signup> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Hane an account? '),
+              Text('Have an account? '),
               TextButton(
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Signup()),
+                    MaterialPageRoute(builder: (context) => SignupForm()),
                   );
                 },
                 child: Text(
