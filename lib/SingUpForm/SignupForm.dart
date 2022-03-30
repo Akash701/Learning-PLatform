@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:healthcare/Signin/signin.dart';
+import 'package:healthcare/WelcomeScreen/welcome.dart';
 import 'InputValues.dart';
 
 class SignupForm extends StatefulWidget {
@@ -10,6 +12,7 @@ class _SignupFormState extends State<SignupForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios, color: Colors.black),
@@ -64,24 +67,27 @@ class _SignupFormState extends State<SignupForm> {
               ),
             ],
           ),
-          Container(
-            child: Center(
-              child: Text(
-                'Sign in',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                    color: Colors.white),
+          RawMaterialButton(
+            onPressed: () {},
+            child: Container(
+              child: Center(
+                child: Text(
+                  'Sign in',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      color: Colors.white),
+                ),
               ),
-            ),
-            width: 270,
-            height: 70,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(
-                Radius.circular(20),
+              width: 270,
+              height: 70,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(20),
+                ),
+                shape: BoxShape.rectangle,
+                color: Colors.blue,
               ),
-              shape: BoxShape.rectangle,
-              color: Colors.blue,
             ),
           ),
           Row(
@@ -92,7 +98,7 @@ class _SignupFormState extends State<SignupForm> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SignupForm()),
+                    MaterialPageRoute(builder: (context) => welcome()),
                   );
                 },
                 child: Text(
