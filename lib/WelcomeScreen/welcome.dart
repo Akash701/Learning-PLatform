@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healthcare/ForgotPassword/forgotPassword.dart';
 import 'package:healthcare/SingUpForm/InputValues.dart';
 
 class welcome extends StatefulWidget {
@@ -48,7 +49,12 @@ class _welcomeState extends State<welcome> {
                 height: 30,
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ForgotPassword()),
+                  );
+                },
                 child: Text(
                   'Forgot Password?',
                   style: TextStyle(color: Colors.red),
