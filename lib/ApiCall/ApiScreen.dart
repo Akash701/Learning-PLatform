@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class RecipeCard extends StatelessWidget {
+class LearningCard extends StatelessWidget {
   final String title;
   final String rating;
-  final String cookTime;
+  final String CourseTime;
   final String thumbnailUrl;
-  RecipeCard({
+  LearningCard({
     @required this.title,
-    @required this.cookTime,
+    @required this.CourseTime,
     @required this.rating,
     @required this.thumbnailUrl,
   });
@@ -95,7 +95,7 @@ class RecipeCard extends StatelessWidget {
                         size: 18,
                       ),
                       SizedBox(width: 7),
-                      Text(cookTime),
+                      Text(CourseTime),
                     ],
                   ),
                 )
